@@ -1,0 +1,28 @@
+{
+  "name": "Caonima",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "gif finder",
+   "icons": {
+    "64": "icon.png"
+   },
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_title": "Caonima",
+    "default_popup": "src/browser_action/browser_action.html"
+  },
+  "permissions": [
+    "*://*/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+         "*://*/*"
+      ],
+      "js": [
+        "src/inject/inject.js"
+      ]
+    }
+  ]
+}
